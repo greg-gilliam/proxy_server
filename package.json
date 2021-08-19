@@ -15,7 +15,7 @@
     "recreate-tables": "npm run drop-tables && npm run create-tables",
     "setup-db": "npm run recreate-tables && npm run load-seed-data",
     "setup-db:prod": "heroku run npm run setup-db",
-    "setup-heroku": "heroku addons:create heroku-postgresql:hobby-dev && heroku config:set PGSSLMODE=require && heroku config:get DATABASE_URL"
+    "setup-heroku": "heroku addons:create heroku-postgresql:hobby-dev -a agile-harbor-93603 && heroku config:set PGSSLMODE=require -a agile-harbor-93603 && heroku config:get DATABASE_URL -a agile-harbor-93603"
   },
   "jest": {
     "testEnvironment": "node"
